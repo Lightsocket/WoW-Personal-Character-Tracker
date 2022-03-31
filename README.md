@@ -8,6 +8,14 @@ The application is exiting automatically at the end of dialogue instead of when 
 In test cases, the app is pulling names correctly (the current pushed code will only pull character "Lightsocket" this has been fixed and will be included in future updates. This is merely a push to show what the app will do. 
 
 
+*** Intended feature list ***
+Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event(found in lines 130-137)
+
+Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program'(Lines 75-159)
+
+Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program(lines 52-72)
+
+
 Future goal 
 --- 6 months time --- 
 Take this application and turn it into a desktop application or website where this information can be stored and pulled at will by individuals with created accounts.
