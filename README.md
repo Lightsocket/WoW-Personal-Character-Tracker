@@ -37,6 +37,8 @@ Implement a “master loop” console application where the user can repeatedly 
 
 Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program(lines 52-72)
 
+Read data from an external file, such as text, JSON, CSV, etc and use that data in your application
+
 
 Future goal 
 --- 6 months time --- 
