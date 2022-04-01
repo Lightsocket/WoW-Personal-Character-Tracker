@@ -17,24 +17,14 @@ namespace PersonalCharacterTracker
     {
         static void Main(string[] args)
         {
-            
-                
-            
-           {
-                     var toon = new Toon();
-                     string userInput;
-                     int mvault = 0;
-                     int raidvault = 0;
-                     string ToonName;
-                     string ToonClass;
-                     string ToonRace;
-                     
-
-
-                    
+            var CSVConfig = new CsvConfiguration(CultureInfo.CurrentCulture);
+            using var StreamReader = File.OpenText("ToonTracker.csv");
+            using var csvReader = new CsvReader(StreamReader, CSVConfig);
+            string GetData;
+            var isLineOne = true;
                      List<Toon> toons = new List<Toon>();
                      List<Toon> toonList = toons;
-                     toonList.Add(new Toon());
+                    /* toonList.Add(new Toon());
                      toonList[0].ToonName = "Lightsocket";
                      toonList[0].ToonClass = "Paladin";
                      toonList[0].ToonRace = "Human";
@@ -53,7 +43,54 @@ namespace PersonalCharacterTracker
                      toonList.Add(new Toon());
                      toonList[3].ToonName = "Lightspring";
                      toonList[3].ToonClass = "Rogue";
-                     toonList[3].ToonRace = "";
+                     toonList[3].ToonRace = "Night Elf";*/
+            while(csvReader.Read())
+            {
+                if (isLineOne == true)
+                {
+                    isLineOne = false;
+
+                } else 
+
+                {
+                    Toon toon = new Toon();
+                    string Name;
+                    string Class;
+                    string Race;
+                    csvReader.TryGetField<string>(0, out Name);
+                    csvReader.TryGetField<string>(1, out Class);
+                    csvReader.TryGetField<string>(2, out Race);
+                    toon.ToonName = Name; 
+                    toon.ToonClass = Class;
+                    toon.ToonRace = Race;  
+                    toonList.Add(toon);
+                   
+                
+                }
+               
+               
+                
+
+            }
+
+
+
+
+                
+            
+           {
+                     var toon = new Toon();
+                     string userInput;
+                     int mvault = 0;
+                     int raidvault = 0;
+                     string ToonName;
+                     string ToonClass;
+                     string ToonRace;
+                     
+
+
+                    
+                    
 
 
                      do
@@ -97,11 +134,18 @@ namespace PersonalCharacterTracker
                              }
                              else
                              {
-                                 Console.WriteLine("1. " + toonList[0].ToonName + " " + toonList[0].ToonRace + " " + toonList[0].ToonClass);
+                                int counter = 1;
+                                foreach (Toon character in toonList) 
+                                {
+                                  Console.WriteLine(counter.ToString() + ", " + character.ToonName + " " + character.ToonRace + " " + character.ToonClass + ".");
+                                  counter++;
+                                
+                                }
+                             
+                            
+                                 
 
-                                 Console.WriteLine("2. " + toonList[1].ToonName + " " + toonList[1].ToonRace + " " + toonList[1].ToonClass);
-
-                                 Console.WriteLine("3." + toonList[2].ToonName + " " + toonList[2].ToonRace + " " + toonList[2].ToonClass);
+                                 
 
                                  Console.WriteLine("Which toon from the list above would you Like to view?");                                 
                                  var v = Convert.ToInt32((Console.ReadLine()));
