@@ -12,4 +12,10 @@
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ToonTracker.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

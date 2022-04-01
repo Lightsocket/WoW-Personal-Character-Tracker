@@ -21,9 +21,10 @@ namespace toon
 
         public string ToonRace { get; set; }
              
-            
+        public int mvault { get; set; }
+        public int raidvault { get; set; }  
                
-             
+            
         
     }  
 }
