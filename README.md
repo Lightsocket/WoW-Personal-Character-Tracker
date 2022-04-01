@@ -1,11 +1,33 @@
 # WoW-Personal-Character-Tracker
 A simple console app to track your characters in WoW. WIP
 The purpose of this app currently is to keep track of all of your World of Warcraft character's progress in a given week. In its current state, it is keeping track of three of my personal wow characters. When clicking "E" for existing at the start, it will populate a list of the added character's. Depending on the character selected, it will pull that character's information up. I'm in the process of adding a feature to say "All" and have the system populate all characters who will have a vault in that week. 
-Current known issues:
-Not yet added the ability to edit this list outside of the code, this will be coming within the next day max.
-Not yet added the ability to add new toons, this will be added within the next few hours.
-The application is exiting automatically at the end of dialogue instead of when user inputs "exit". Fixing this by end of day tomorrow. 03/30/2022.
-In test cases, the app is pulling names correctly (the current pushed code will only pull character "Lightsocket" this has been fixed and will be included in future updates. This is merely a push to show what the app will do. 
+--Application Path--
+Add your New Character by pressing "N" (All entries are CASE Sensitive)
+View Existing Characters by pressing "E" (All entries are CASE Sensitive)
+
+New Character will Prompt you for character (toon) information in the following Order:
+*Name- Put the name of your Character
+*Class- Enter the name of your class (This is not restricted to allow this application to work in the case that someone wants to add their spec or for future classes.)
+*Race- Enter your characters race (this is not restricted as some people prefer to use nicknames etc. for Races and I want to allow that freedom)
+
+Once doing this you will have the option to add another character or view characters.
+When viewing existing characters with Input "E" it will ask which character from the list you want to view.
+Enter the number of the character you wish to select and click enter.
+This will then prompt to ask you if you wish to Update or View character information.
+
+
+To update type "U" (all enteries are CASE sensitive)
+This will then ask How many Mythic + vaults this character has unlocked
+Type any number and press enter to store this data to the respective toon.
+
+It will then ask how many Raid Vaults this character has unlocked.
+Type any number and press enter to store this data to the respective toon.
+
+When you press "V" to View (all enteries are CASE sensitive)
+THis will display the Vault information for the respective toon and tell you how many days until you can recieve this vault (Days till Tuesday).
+
+
+
 
 
 *** Intended feature list ***
